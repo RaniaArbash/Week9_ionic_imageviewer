@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Image Viewr
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list >
+    <ion-item *ngFor="let photo of listOfPhotos"
+    [routerLink]="['./',photo.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="photo.url">
+        </ion-img>
+      </ion-avatar>
+      <ion-label>
+          {{photo.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
