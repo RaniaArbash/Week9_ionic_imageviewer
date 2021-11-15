@@ -4,20 +4,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'photos',
-    pathMatch: 'full'
-  },
- {
-   path: 'photos',
-   children:[{
-      path: '',
-      loadChildren:() => import('./home/home.module').then(m => m.HomePageModule)
-   },{
-      path:':photo_id',
-      loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
-
-   }]
- }
+    loadChildren: () => import('./tabnav/tabnav.module').then( m => m.TabnavPageModule)
+  }
 ];
 
 @NgModule({
