@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{loadedImage.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      {{loadedImage.title}}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-item>
+    <ion-img [src]="loadedImage.url">
+    </ion-img>
+  </ion-item>
+ </ion-card>
+
+</ion-content>
